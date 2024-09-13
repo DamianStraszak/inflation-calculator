@@ -44,7 +44,7 @@ const App: React.FC = () => {
 
     for (let k = 0; k < mints.length; k++) {
       cumulativeMint += k === 0 ? 0 : mints[k - 1];
-      const aprValue = (mints[k] / (current + cumulativeMint)) * 100;
+      const aprValue = 0.9*(1/0.62)*(mints[k] / (current + cumulativeMint)) * 100;
       apr.push(aprValue);
     }
 
@@ -71,7 +71,7 @@ const App: React.FC = () => {
     labels: Array.from({ length: 10 }, (_, i) => `Year ${i + 1}`),
     datasets: [
       {
-        label: 'Staking APR (%) assuming 50% of all AZERO staked',
+        label: 'Staking APR (%) assuming 62% of all AZERO staked',
         data: aprData,
         fill: false,
         borderColor: 'rgb(192, 75, 75)',
