@@ -4,7 +4,7 @@ import 'chart.js/auto';
 
 const App: React.FC = () => {
   const current = 371.4; // constant current value
-  const [maxSupply, setMaxSupply] = useState(500);
+  const [maxSupply, setMaxSupply] = useState(520);
   const [firstYearMint, setFirstYearMint] = useState(30);
   const [error, setError] = useState<string | null>(null);
 
